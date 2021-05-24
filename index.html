@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>These Heels Do Not Exist</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+
+
+    <!-- Load TensorFlow.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <!-- Load Posenet -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+    <!-- Load posenet-similarity -->
+    <script src="https://cdn.jsdelivr.net/npm/posenet-similarity/dist/posenet-similarity.min.js"></script>
+
+
+    <!-- <script src="sketch.js"></script> -->
+  </head>
+
+<body>
+  <h1>These Heels Do Not Exist</h1>
+    <h3>Project New Shoe: <br> Can a machine make a new pair of heels?</h3>
+
+    <p><br>These Heels Do Not Exist uses a Deep Convolutional Generative Adversarial Network (DCGAN) model and an extensive shoe dataset from the University of Texas at Austin called the UT Zappos50K (or UT-Zap50K) dataset, which is a shoe dataset of 50,025 catalog images from Zappos.com. Though previous machine learning models have worked with sneakers, they have not really worked with other kinds of shoes. These Heels Do Not Exist is another step towards utilizing machine learning in fashion.</p>
+
+      <img id='0' src='0.png'/>
+    <img id='1' src='1.png'/>
+    <img id='2' src='2.png'/>
+    <img id='3' src='3.png'/>
+    <img id='4' src='4.png'/>
+    <img id='5' src='5.png'/>
+    <img id='6' src='6.png'/>
+    <img id='7' src='7.png'/>
+    <img id='8' src='8.png'/>
+    <img id='9' src='9.png'/>
+     <img id='10' src='10.png'/>
+    <img id='11' src='11.png'/>
+    <img id='12' src='12.png'/>
+    <img id='13' src='13.png'/>
+    <img id='14' src='14.png'/>
+    <img id='15' src='15.png'/>
+    <img id='16' src='16.png'/>
+    <img id='17' src='17.png'/>
+    <img id='18' src='18.png'/>
+    <img id='19' src='19.png'/>
+      <img id='20' src='20.png'/>
+    <img id='21' src='21.png'/>
+    <img id='22' src='22.png'/>
+    <img id='23' src='23.png'/>
+    <img id='24' src='24.png'/>
+    <img id='25' src='25.png'/>
+    <img id='26' src='26.png'/>
+    <img id='27' src='27.png'/>
+    <img id='28' src='28.png'/>
+    <img id='29' src='29.png'/>
+      <img id='30' src='30.png'/>
+    <img id='31' src='31.png'/>
+    <img id='32' src='32.png'/>
+    <img id='33' src='33.png'/>
+    <img id='34' src='34.png'/>
+    <img id='35' src='35.png'/>
+    <img id='36' src='36.png'/>
+    <img id='37' src='37.png'/>
+    <img id='38' src='38.png'/>
+    <img id='39' src='39.png'/>
+      <img id='40' src='40.png'/>
+    <img id='41' src='41.png'/>
+    <img id='42' src='42.png'/>
+    <img id='43' src='43.png'/>
+    <img id='44' src='44.png'/>
+    <img id='45' src='45.png'/>
+    <img id='46' src='46.png'/>
+    <img id='47' src='47.png'/>
+    <img id='48' src='48.png'/>
+    <img id='49' src='49.png'/>
+      <img id='50' src='50.png'/>
+    <img id='51' src='51.png'/>
+    <img id='52' src='52.png'/>
+    <img id='53' src='53.png'/>
+    <img id='54' src='54.png'/>
+    <img id='55' src='55.png'/>
+    <img id='56' src='56.png'/>
+    <img id='57' src='57.png'/>
+    <img id='58' src='58.png'/>
+    <img id='59' src='59.png'/>
+      <img id='60' src='60.png'/>
+    <img id='61' src='61.png'/>
+    <img id='62' src='62.png'/>
+    <img id='63' src='63.png'/>
+    <img id='64' src='64.png'/>
+    <img id='65' src='65.png'/>
+    <img id='66' src='66.png'/>
+    <img id='67' src='67.png'/>
+    <img id='68' src='68.png'/>
+    <img id='69' src='69.png'/>
+      <img id='70' src='70.png'/>
+    <img id='71' src='71.png'/>
+    <img id='72' src='72.png'/>
+    <img id='73' src='73.png'/>
+    <img id='74' src='74.png'/>
+    <img id='75' src='75.png'/>
+    <img id='76' src='76.png'/>
+    <img id='77' src='77.png'/>
+    <img id='78' src='78.png'/>
+    <img id='79' src='79.png'/>
+
+    <br><br><br>
+    <p>The Dataset for Heels: <br>
+    <a href="http://vision.cs.utexas.edu/projects/finegrained/utzap50k/" target="_blank">UT Zappos50K Dataset</a>
+    </p>
+
+    <p>The Model: <br>
+    <a href="https://github.com/NikhilNandoskar/Pokemon-DCGAN/blob/master/Final_DCGAN.ipynb" target="_blank">Pokemon-DCGAN</a>
+    </p>
+
+    <p>The Image Dataset, The Colab Notebook, and The Output: <br>
+    <a href="https://drive.google.com/drive/folders/1Ar6SpMLALw1VTWxNkTuNOpG9uLSW_tyY?usp=sharing" target="_blank">Heels-DCGAN</a>
+    </p>
+
+    <p>The Inspiration: <br>
+    <a href="https://thisxdoesnotexist.com/" target="_blank">This X Does Not Exist</a>
+    </p>
+
+</body>
+
+</html>
+
+
